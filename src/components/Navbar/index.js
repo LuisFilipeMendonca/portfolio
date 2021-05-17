@@ -13,7 +13,7 @@ import {
 const navbarData = [
   { id: 1, to: "#", description: "Home" },
   { id: 2, to: "#about", description: "About" },
-  { id: 3, to: "#prohects", description: "Projects" },
+  { id: 3, to: "#projects", description: "Projects" },
   { id: 4, to: "#contact", description: "Contact" },
 ];
 
@@ -24,6 +24,7 @@ const Navbar = () => {
   const navbarToggler = () => setIsOpen((prev) => !prev);
 
   const setCurrentNavHandler = (nav) => {
+    navbarToggler();
     setCurrentNav(nav);
   };
 
@@ -42,6 +43,9 @@ const Navbar = () => {
               to={to}
               className={currentNav === description ? "active" : null}
               onClick={() => setCurrentNavHandler(description)}
+              scroll={(el) =>
+                el.scrollIntoView({ behavior: "smooth", duration: 5000 })
+              }
             >
               {description}
             </NavbarLink>

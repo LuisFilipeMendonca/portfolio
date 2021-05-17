@@ -4,8 +4,11 @@ import GlobalStyle from "./style";
 
 import theme from "./style/theme";
 
-import HomePage from "./pages/Home";
 import Navbar from "./components/Navbar";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
+import ProjectsPage from "./pages/Projects";
+import ContactPage from "./pages/Contact";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <div className="App">
           <Navbar />
           <HomePage />
+          <AboutPage />
+          <ProjectsPage />
+          <ContactPage />
           <GlobalStyle />
         </div>
       </ThemeProvider>

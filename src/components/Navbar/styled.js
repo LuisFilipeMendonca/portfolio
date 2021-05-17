@@ -10,6 +10,7 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
   padding: 0 0.8rem;
   z-index: 10;
+  background-color: #383837;
 `;
 
 export const NavbarBrand = styled.h1`
@@ -20,7 +21,6 @@ export const NavbarBrand = styled.h1`
 export const NavbarButton = styled.button`
   width: 3rem;
   height: 3rem;
-  /* border: 1px solid #84f2d6; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,6 @@ export const NavbarButton = styled.button`
 export const NavbarButtonItem = styled.span`
   height: 2px;
   width: 70%;
-  background-color: #000;
   position: absolute;
   transition: transform 0.3s ease-in-out;
   display: block;
@@ -60,7 +59,7 @@ export const NavbarMenu = styled.ul`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(56, 56, 55, 0.9);
   transform: ${({ isOpen }) =>
     isOpen ? "translateX(0)" : "translateX(-100%)"};
   transition: transform 0.2s ease-in-out;
@@ -68,6 +67,10 @@ export const NavbarMenu = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (orientation: landscape) {
+    padding-top: 5rem;
+  }
 `;
 
 export const NavbarLink = styled(HashLink)`
@@ -104,7 +107,7 @@ export const NavbarItem = styled.li`
   }
 
   &:hover ${NavbarLink}, &:focus ${NavbarLink}, &:active ${NavbarLink} {
-    color: #000;
+    color: #383837;
   }
 
   &:hover::before,
@@ -112,5 +115,11 @@ export const NavbarItem = styled.li`
   &:active::before {
     width: 100%;
     background-color: #84f2d6;
+  }
+
+  @media (orientation: landscape) {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 `;

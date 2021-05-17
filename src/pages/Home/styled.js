@@ -2,7 +2,10 @@ import styled, { css } from "styled-components";
 import { Section } from "../../style";
 
 export const HomeSection = styled(Section)`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(
+      rgba(56, 56, 55, 0.8),
+      rgba(56, 56, 55, 0.8)
+    ),
     ${({ bg }) => `url(${bg})`};
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +22,6 @@ export const HomeContent = styled.div`
   color: white;
   display: flex;
   align-items: center;
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 40%, transparent 90%); */
   flex-direction: column;
 `;
 
