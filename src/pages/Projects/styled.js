@@ -17,9 +17,10 @@ export const SectionTitle = styled.h1`
 export const ProjectContainer = styled.article`
   border: 1px solid #ccc;
   padding: 2rem 1rem;
-  background-color: rgba(56, 56, 55, 0.2);
+  background-color: rgba(56, 56, 55, 0.1);
   border-radius: 3px;
   color: #383837;
+  border: 1px solid #fc6b3f;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
@@ -43,6 +44,7 @@ export const ProjectInformation = styled.div`
 
 export const ProjectTitle = styled.h2`
   text-align: center;
+  color: #fc6b3f;
 `;
 
 export const ProjectDescriptionContainer = styled.div``;
@@ -71,7 +73,7 @@ export const ProjectLinkDescription = styled.span`
 `;
 
 export const MobileContainer = styled.div`
-  width: 5rem;
+  width: 5.5rem;
   height: 10rem;
   background-color: #383837;
   border-radius: 8px;
@@ -116,7 +118,6 @@ export const MobileImg = styled.img`
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
 `;
 
 export const DesktopContainer = styled.div`
