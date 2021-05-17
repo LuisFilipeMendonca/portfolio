@@ -44,7 +44,7 @@ const Navbar = () => {
               className={currentNav === description ? "active" : null}
               onClick={() => setCurrentNavHandler(description)}
               scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", duration: 5000 })
+                el.scrollIntoView({ behavior: "smooth", block: "start" })
               }
             >
               {description}
