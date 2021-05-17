@@ -23,6 +23,10 @@ const Navbar = () => {
 
   const navbarToggler = () => setIsOpen((prev) => !prev);
 
+  const setCurrentNavHandler = (nav) => {
+    setCurrentNav(nav);
+  };
+
   return (
     <NavbarContainer>
       <NavbarBrand>Filipe Portfolio</NavbarBrand>
@@ -37,6 +41,7 @@ const Navbar = () => {
             <NavbarLink
               to={to}
               className={currentNav === description ? "active" : null}
+              onClick={() => setCurrentNavHandler(description)}
             >
               {description}
             </NavbarLink>
