@@ -8,6 +8,7 @@ import {
   HomeInfoTitle,
   HomeInfoSecondaryTitle,
   HomeInfoQuote,
+  HomeProfilePhotoContainer,
 } from "./styled";
 
 import Bg from "../../assets/img/bg.jpg";
@@ -61,13 +62,14 @@ const HomePage = () => {
             <span> - Matshona Dhliwayo</span>
           </HomeInfoQuote>
         </HomeInfo>
-        <HomeProfilePhoto
-          src={ProfilePhoto}
+        <HomeProfilePhotoContainer
           ref={imgRef}
           data-animation="fade-right"
           data-delay="0.5s"
           data-duration="0.5s"
-        />
+        >
+          <HomeProfilePhoto src={ProfilePhoto} />
+        </HomeProfilePhotoContainer>
       </HomeContent>
     </HomeSection>
   );

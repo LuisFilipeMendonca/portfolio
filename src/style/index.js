@@ -8,6 +8,36 @@ export default createGlobalStyle`
         letter-spacing: 1px;
     }
 
+    html {
+      font-size: 75%;
+    }
+
+    body {
+      font-size: 1.3rem;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    li {
+      list-style: none;
+    }
+
+a {
+  text-decoration: none;
+}
+
     @keyframes fade-top {
       0% {transform: translateY(-20px); opacity: 0}
       100% {transform: translateY(0); opacity: 1}

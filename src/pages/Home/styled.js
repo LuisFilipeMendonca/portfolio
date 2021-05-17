@@ -10,6 +10,7 @@ export const HomeSection = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: ${({ theme }) => theme.dimensions.navbar};
 `;
 
 export const HomeContent = styled.div`
@@ -17,21 +18,15 @@ export const HomeContent = styled.div`
   max-width: 55rem;
   color: white;
   display: flex;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, transparent 90%);
+  align-items: center;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 40%, transparent 90%); */
+  flex-direction: column;
 `;
 
 export const HomeInfo = styled.div`
   flex: 1;
   padding: 2rem;
   border-radius: 8px;
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  q {
-    font-size: 1.1rem;
-  }
 
   & > :not(:last-child) {
     margin-bottom: 1.5rem;
@@ -42,23 +37,51 @@ const hideElements = css`
   opacity: 0;
 `;
 
+export const HomeProfilePhotoContainer = styled.div`
+  height: 14rem;
+  width: 14rem;
+  position: relative;
+  border-radius: 50%;
+  order: -1;
+  ${hideElements};
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 103%;
+    width: 103%;
+    border-radius: 50%;
+    border: 2px solid #84f2d6;
+  }
+`;
+
 export const HomeProfilePhoto = styled.img`
-  height: 16rem;
-  width: 16rem;
+  height: 100%;
+  width: 100%;
   display: block;
   object-fit: cover;
   border-radius: 50%;
-  ${hideElements};
 `;
 
 export const HomeInfoTitle = styled.h1`
-  ${hideElements}
+  ${hideElements};
+  text-align: center;
 `;
 
-export const HomeInfoSecondaryTitle = styled.h2`
+export const HomeInfoSecondaryTitle = styled.p`
   ${hideElements}
+  text-align: center;
 `;
 
 export const HomeInfoQuote = styled.p`
-  ${hideElements}
+  ${hideElements};
+  text-align: center;
+
+  q {
+    color: #84f2d6;
+    font-size: 1.4rem;
+  }
 `;
