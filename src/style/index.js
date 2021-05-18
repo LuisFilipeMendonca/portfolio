@@ -57,15 +57,18 @@ export default createGlobalStyle`
 
       body {
         background-position: 120%;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      body {
         background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.5) 40%, rgba(31, 31, 31, 0.9)), url(${bg});
       }
     }
 
     @media screen and (min-width: 1200px) {
-
       body {
         background-position: 110%;
-        background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.5) 40%, rgba(31, 31, 31, 0.9)), url(${bg});
       }
     }
 

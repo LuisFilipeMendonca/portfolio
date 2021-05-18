@@ -59,20 +59,17 @@ export const ProjectPreview = styled.div`
   }
 `;
 
-export const ProjectInformation = styled.div`
-  margin-top: 1rem;
-
-  & > *:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-`;
+export const ProjectInformation = styled.div``;
 
 export const ProjectTitle = styled.h2`
   text-align: center;
   color: #fd8b68;
+  margin-bottom: 1.5rem;
 `;
 
-export const ProjectDescriptionContainer = styled.div``;
+export const ProjectDescriptionContainer = styled.div`
+  margin-bottom: 3rem;
+`;
 
 export const ProjectDescription = styled.p`
   text-indent: 2rem;

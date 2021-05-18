@@ -37,15 +37,17 @@ export const HomeContent = styled.div`
 
 export const HomeTitle = styled.h2`
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const HomeSecondaryTitle = styled.h1`
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const HomeQuote = styled.p`
+  margin-bottom: 4rem;
+
   q {
     color: #fd8b68;
     font-size: 1.5rem;

@@ -37,6 +37,8 @@ import {
 
 import useAnimation from "../../hook/useAnimation";
 
+import BaseButton from "../../components/BaseButton";
+
 const ProjectsPages = () => {
   const { ref: projectOneRef } = useAnimation();
   const { ref: projectTwoRef } = useAnimation();
@@ -77,11 +79,13 @@ const ProjectsPages = () => {
               </ProjectDescription>
             </ProjectDescriptionContainer>
             <ProjectCTA>
-              <ProjectLink to="/">
+              <BaseButton path="/" role="link" classname="secondary">
                 <FaGithub />
-                <ProjectLinkDescription>See source code</ProjectLinkDescription>
-              </ProjectLink>
-              <button>Watch preview</button>
+                <ProjectLinkDescription>Source code</ProjectLinkDescription>
+              </BaseButton>
+              <BaseButton type="button" role="button" classname="primary">
+                Watch preview
+              </BaseButton>
             </ProjectCTA>
           </ProjectInformation>
         </ProjectContainer>

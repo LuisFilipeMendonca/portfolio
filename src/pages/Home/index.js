@@ -10,6 +10,8 @@ import {
 
 import useAnimation from "../../hook/useAnimation";
 
+import BaseButton from "../../components/BaseButton";
+
 const HomePage = () => {
   const { ref } = useAnimation();
 
@@ -18,7 +20,7 @@ const HomePage = () => {
       <HomeContent ref={ref} data-animation="fade-bottom" data-duration="0.5s">
         <HomeTitle>Hi, I'm Filipe.</HomeTitle>
         <HomeSecondaryTitle>
-          I'm a self taught developer in a quest to become a full stack
+          I'm a self-taught developer in a quest to become a full stack
           developer.
         </HomeSecondaryTitle>
         <HomeQuote>
@@ -28,7 +30,14 @@ const HomePage = () => {
           </q>
           <span> - Matshona Dhliwayo</span>
         </HomeQuote>
-        <button>See my work</button>
+        <BaseButton
+          type="link"
+          path="/projects"
+          classname="secondary"
+          role="link"
+        >
+          See my work
+        </BaseButton>
       </HomeContent>
     </HomeSection>
   );
