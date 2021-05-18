@@ -8,11 +8,9 @@ import {
   HomeQuote,
 } from "./styled";
 
-import Bg from "../../assets/img/bg.jpg";
-
 const HomePage = () => {
   return (
-    <HomeSection bg={Bg} id="">
+    <HomeSection>
       <HomeContent>
         <HomeTitle>Hi, I'm Filipe.</HomeTitle>
         <HomeSecondaryTitle>

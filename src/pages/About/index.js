@@ -4,7 +4,7 @@ import { AboutSection, SectionTitle, AboutContent, AboutText } from "./styled";
 
 const AboutPage = () => {
   return (
-    <AboutSection id="about">
+    <AboutSection>
       <SectionTitle>About Me</SectionTitle>
       <AboutContent>
         <AboutText>

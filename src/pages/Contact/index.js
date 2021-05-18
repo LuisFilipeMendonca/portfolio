@@ -4,7 +4,7 @@ import { ContactSection } from "./styled";
 
 const ContactPage = () => {
   return (
-    <ContactSection id="contact">
+    <ContactSection>
       <h1>Contact</h1>
     </ContactSection>
   );
