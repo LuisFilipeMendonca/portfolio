@@ -25,6 +25,7 @@ export const AboutContent = styled.div`
   margin-top: 2rem;
   width: 100%;
   max-width: 45rem;
+  opacity: 0;
 
   & > *:not(:last-child) {
     margin-bottom: 2rem;

@@ -2,10 +2,14 @@ import React from "react";
 
 import { AboutSection, AboutContent, AboutText } from "./styled";
 
+import useAnimation from "../../hook/useAnimation";
+
 const AboutPage = () => {
+  const { ref } = useAnimation();
+
   return (
     <AboutSection>
-      <AboutContent>
+      <AboutContent ref={ref} data-animation="fade-top" data-duration="0.5s">
         <AboutText>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

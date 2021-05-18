@@ -37,6 +37,7 @@ export const ProjectContainer = styled.article`
   border: 1px solid #fd8b68;
   width: 100%;
   max-width: 45rem;
+  opacity: 0;
 
   &:not(:last-child) {
     margin-bottom: 3rem;

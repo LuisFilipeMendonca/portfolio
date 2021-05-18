@@ -9,7 +9,7 @@ const useAnimation = () => {
     if (observerTarget.isIntersecting) {
       const { target } = observerTarget;
       const animation = target.getAttribute("data-animation");
-      const delay = target.getAttribute("data-delay");
+      const delay = target.getAttribute("data-delay") || "0s";
       const duration = target.getAttribute("data-duration");
       target.style.animation = `${animation} ${duration} ease-in ${delay} forwards`;
     }
@@ -19,7 +19,7 @@ const useAnimation = () => {
     const options = {
       root: null,
       rootMargin: "20px",
-      threshold: 1.0,
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver(handleObserver, options);

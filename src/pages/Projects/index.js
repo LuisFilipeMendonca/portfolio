@@ -35,11 +35,22 @@ import {
   ProjectLinkDescription,
 } from "./styled";
 
+import useAnimation from "../../hook/useAnimation";
+
 const ProjectsPages = () => {
+  const { ref: projectOneRef } = useAnimation();
+  const { ref: projectTwoRef } = useAnimation();
+  const { ref: projectThreeRef } = useAnimation();
+  const { ref: projectFourRef } = useAnimation();
+
   return (
     <ProjectsSection>
       <ProjectsContent>
-        <ProjectContainer>
+        <ProjectContainer
+          ref={projectOneRef}
+          data-animation="fade-right"
+          data-duration="0.5s"
+        >
           <ProjectPreview>
             <MobileContainer>
               <MobileImg src={rickMobile} />
@@ -74,7 +85,11 @@ const ProjectsPages = () => {
             </ProjectCTA>
           </ProjectInformation>
         </ProjectContainer>
-        <ProjectContainer>
+        <ProjectContainer
+          ref={projectTwoRef}
+          data-animation="fade-right"
+          data-duration="0.5s"
+        >
           <ProjectPreview>
             <MobileContainer>
               <MobileImg src={dailyMobile} />
@@ -113,7 +128,11 @@ const ProjectsPages = () => {
             </ProjectCTA>
           </ProjectInformation>
         </ProjectContainer>
-        <ProjectContainer>
+        <ProjectContainer
+          ref={projectThreeRef}
+          data-animation="fade-right"
+          data-duration="0.5s"
+        >
           <ProjectPreview>
             <MobileContainer>
               <MobileImg src={foodgramMobile} />
@@ -154,7 +173,11 @@ const ProjectsPages = () => {
             </ProjectCTA>
           </ProjectInformation>
         </ProjectContainer>
-        <ProjectContainer>
+        <ProjectContainer
+          ref={projectFourRef}
+          data-animation="fade-right"
+          data-duration="0.5s"
+        >
           <ProjectPreview>
             <MobileContainer>
               <MobileImg src={socialMobile} />

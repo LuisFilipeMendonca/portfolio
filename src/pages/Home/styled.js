@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Section } from "../../style";
 
 export const HomeSection = styled(Section)`
@@ -25,6 +25,7 @@ export const HomeContent = styled.div`
   width: 100%;
   max-width: 45rem;
   color: white;
+  opacity: 0;
 
   @media screen and (min-width: 768px) {
     background: rgba(61, 61, 61, 0.4);
@@ -34,24 +35,17 @@ export const HomeContent = styled.div`
   }
 `;
 
-const hideElements = css`
-  opacity: 0;
-`;
-
 export const HomeTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 3rem;
 `;
 
 export const HomeSecondaryTitle = styled.h1`
-  /* ${hideElements} */
   font-size: 3rem;
   margin-bottom: 3rem;
 `;
 
 export const HomeQuote = styled.p`
-  /* ${hideElements}; */
-
   q {
     color: #fd8b68;
     font-size: 1.5rem;

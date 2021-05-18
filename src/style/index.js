@@ -23,6 +23,7 @@ export default createGlobalStyle`
       background-position: left;
       background-attachment: fixed;
       z-index: -1;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -69,17 +70,17 @@ export default createGlobalStyle`
     }
 
     @keyframes fade-top {
-      0% {transform: translateY(-20px); opacity: 0}
+      0% {transform: translateY(-40px); opacity: 0}
       100% {transform: translateY(0); opacity: 1}
     }
 
     @keyframes fade-right {
-      0% {transform: translateX(20px); opacity: 0}
+      0% {transform: translateX(40px); opacity: 0}
       100% {transform: translateX(0); opacity: 1}
     }
 
     @keyframes fade-bottom {
-      0% {transform: translateY(20px); opacity: 0}
+      0% {transform: translateY(40px); opacity: 0}
       100% {transform: translateY(0); opacity: 1}
     }
 `;
