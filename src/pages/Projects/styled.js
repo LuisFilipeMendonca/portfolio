@@ -3,7 +3,6 @@ import { Section } from "../../style";
 import { Link } from "react-router-dom";
 
 export const ProjectsSection = styled(Section)`
-  background-color: #eee;
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 1rem;

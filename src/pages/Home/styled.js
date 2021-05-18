@@ -2,36 +2,38 @@ import styled, { css } from "styled-components";
 import { Section } from "../../style";
 
 export const HomeSection = styled(Section)`
-  background-image: linear-gradient(
-      rgba(56, 56, 55, 0.8),
-      rgba(56, 56, 55, 0.8)
-    ),
-    ${({ bg }) => `url(${bg})`};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding-top: ${({ theme }) => theme.dimensions.navbar};
+  flex-direction: column;
+  padding: 0 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 4rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 0 6rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 8rem;
+  }
 `;
 
 export const HomeContent = styled.div`
   width: 100%;
-  max-width: 55rem;
+  max-width: 40rem;
   color: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
 
-export const HomeInfo = styled.div`
-  flex: 1;
-  padding: 2rem;
-  border-radius: 8px;
+  @media screen and (min-width: 992px) {
+    background: rgba(94, 94, 94, 0.3);
+    padding: 2rem;
+    border-radius: 3px;
+  }
 
-  & > :not(:last-child) {
-    margin-bottom: 1.5rem;
+  @media screen and (min-width: 1200px) {
+    max-width: 55rem;
   }
 `;
 
@@ -39,51 +41,22 @@ const hideElements = css`
   opacity: 0;
 `;
 
-export const HomeProfilePhotoContainer = styled.div`
-  height: 14rem;
-  width: 14rem;
-  position: relative;
-  border-radius: 50%;
-  order: -1;
-  ${hideElements};
-
-  &:before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 103%;
-    width: 103%;
-    border-radius: 50%;
-    border: 2px solid #84f2d6;
-  }
+export const HomeTitle = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 3rem;
 `;
 
-export const HomeProfilePhoto = styled.img`
-  height: 100%;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 50%;
+export const HomeSecondaryTitle = styled.p`
+  /* ${hideElements} */
+  font-size: 3rem;
+  margin-bottom: 3rem;
 `;
 
-export const HomeInfoTitle = styled.h1`
-  ${hideElements};
-  text-align: center;
-`;
-
-export const HomeInfoSecondaryTitle = styled.p`
-  ${hideElements}
-  text-align: center;
-`;
-
-export const HomeInfoQuote = styled.p`
-  ${hideElements};
-  text-align: center;
+export const HomeQuote = styled.p`
+  /* ${hideElements}; */
 
   q {
-    color: #84f2d6;
-    font-size: 1.4rem;
+    color: #ff7517;
+    font-size: 1.5rem;
   }
 `;

@@ -54,6 +54,48 @@ a {
     }
 `;
 
+export const Background = styled.div`
+  background-image: ${({ bg }) => `url(${bg})`},
+    linear-gradient(rgba(31, 31, 31, 1), rgba(31, 31, 31, 1));
+  background-repeat: no-repeat;
+  background-size: 100vh, 100%;
+  background-position: left;
+  background-attachment: fixed;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      rgba(31, 31, 31, 0.9),
+      rgba(31, 31, 31, 0.6),
+      rgba(31, 31, 31, 0.9)
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-position: right;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(31, 31, 31, 0.9),
+        rgba(31, 31, 31, 0.3) 80%,
+        rgba(31, 31, 31, 0.9)
+      );
+    }
+  }
+`;
+
 export const Section = styled.section`
   min-height: 100vh;
 `;

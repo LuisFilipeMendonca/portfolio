@@ -1,40 +1,58 @@
 import styled from "styled-components";
-import { HashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.nav`
-  height: ${({ theme }) => theme.dimensions.navbar};
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.8rem;
+  padding: 1rem;
   z-index: 10;
-  background-color: #383837;
+
+  @media screen and (min-width: 768px) {
+    padding: 1rem 4rem;
+    background: rgba(94, 94, 94, 0.3);
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 1rem 6rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 1rem 8rem;
+  }
 `;
 
 export const NavbarBrand = styled.h1`
-  color: #84f2d6;
+  color: #ff7517;
   z-index: 2;
 `;
 
 export const NavbarButton = styled.button`
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
+  background: rgba(94, 94, 94, 0.3);
+  border-radius: 20%;
+  border: 1px solid #ff7517;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavbarButtonItem = styled.span`
   height: 2px;
-  width: 70%;
+  width: 60%;
   position: absolute;
   transition: transform 0.3s ease-in-out;
   display: block;
-  background-color: #84f2d6;
+  background-color: #f5f5f5;
 
   &:nth-child(1) {
     transform: ${({ isOpen }) =>
@@ -71,16 +89,42 @@ export const NavbarMenu = styled.ul`
   @media (orientation: landscape) {
     padding-top: 5rem;
   }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    transform: translateX(0);
+    padding-top: 0;
+    flex-direction: row;
+    background: none;
+  }
 `;
 
-export const NavbarLink = styled(HashLink)`
+export const NavbarLink = styled(NavLink)`
   display: block;
-  color: #84f2d6;
+  color: #f5f5f5;
   transition: color 0.2s ease-in-out;
   padding: 1rem 0;
 
-  &.active {
-    color: #000;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff7517;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &.active:before,
+  &:focus:before,
+  &:hover:before {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0.8rem 4rem;
   }
 `;
 
@@ -94,32 +138,18 @@ export const NavbarItem = styled.li`
     margin-bottom: 2rem;
   }
 
-  &:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: ${({ isActive }) => (isActive ? "100%" : "0")};
-    height: 100%;
-    background-color: ${({ isActive }) => (isActive ? "#84f2d6" : "#000")};
-    transition: width 0.2s ease-in-out;
-    z-index: -1;
-  }
-
-  &:hover ${NavbarLink}, &:focus ${NavbarLink}, &:active ${NavbarLink} {
-    color: #383837;
-  }
-
-  &:hover::before,
-  &:focus::before,
-  &:active::before {
-    width: 100%;
-    background-color: #84f2d6;
-  }
-
   @media (orientation: landscape) {
     &:not(:last-child) {
       margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: unset;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 4rem;
     }
   }
 `;

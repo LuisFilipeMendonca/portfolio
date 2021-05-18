@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Section } from "../../style";
 
 export const AboutSection = styled(Section)`
-  background-color: #84f2d6;
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 1rem;

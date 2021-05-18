@@ -1,30 +1,28 @@
+import React from "react";
+
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyle from "./style";
+import GlobalStyle, { Background } from "./style";
 
 import theme from "./style/theme";
 
-import Navbar from "./components/Navbar";
-import HomePage from "./pages/Home";
-import AboutPage from "./pages/About";
-import ProjectsPage from "./pages/Projects";
-import ContactPage from "./pages/Contact";
+import bg from "./assets/img/bg.png";
 
-function App() {
+import Navbar from "./components/Navbar";
+
+import Routes from "./routes";
+
+const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <div className="App">
-          <Navbar />
-          <HomePage />
-          <AboutPage />
-          <ProjectsPage />
-          <ContactPage />
-          <GlobalStyle />
-        </div>
+        <Background bg={bg} />
+        <Navbar />
+        <Routes />
+        <GlobalStyle />
       </ThemeProvider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
