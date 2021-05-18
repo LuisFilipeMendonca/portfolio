@@ -5,32 +5,57 @@ import { Link } from "react-router-dom";
 export const ProjectsSection = styled(Section)`
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 1rem;
+  align-items: flex-start;
+  padding: ${({ theme }) => theme.dimensions.navbar} 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: ${({ theme }) => theme.dimensions.navbar} 4rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: ${({ theme }) => theme.dimensions.navbar} 6rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: ${({ theme }) => theme.dimensions.navbar} 8rem;
+  }
 `;
 
-export const SectionTitle = styled.h1`
-  text-align: center;
-  margin-bottom: 2rem;
+export const ProjectsContent = styled.div`
+  margin: 2rem auto 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 2rem 0 0;
+  }
 `;
 
 export const ProjectContainer = styled.article`
-  border: 1px solid #ccc;
   padding: 2rem 1rem;
-  background-color: rgba(56, 56, 55, 0.1);
+  background: rgba(61, 61, 61, 0.5);
   border-radius: 3px;
-  color: #383837;
-  border: 1px solid #fc6b3f;
+  color: #f5f5f5;
+  border: 1px solid #fd8b68;
+  width: 100%;
+  max-width: 45rem;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem;
   }
 `;
 
 export const ProjectPreview = styled.div`
   display: flex;
   justify-content: space-around;
-  height: 13rem;
-  position: relative;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const ProjectInformation = styled.div`
@@ -43,13 +68,12 @@ export const ProjectInformation = styled.div`
 
 export const ProjectTitle = styled.h2`
   text-align: center;
-  color: #fc6b3f;
+  color: #fd8b68;
 `;
 
 export const ProjectDescriptionContainer = styled.div``;
 
 export const ProjectDescription = styled.p`
-  text-align: justify;
   text-indent: 2rem;
 
   &:not(:last-child) {
@@ -77,9 +101,8 @@ export const MobileContainer = styled.div`
   background-color: #383837;
   border-radius: 8px;
   padding: 10px 4px 12px;
-  position: absolute;
-  transform: translate(-10rem, 2rem);
-  z-index: 1;
+  position: relative;
+  border: 1px solid #f5f5f5;
 
   &:before {
     content: "";
@@ -109,6 +132,11 @@ export const MobileContainer = styled.div`
     -moz-box-shadow: inset 0 0 10px #ccc;
     -webkit-box-shadow: inset 0 0 10px #ccc;
     box-shadow: inset 0 0 1px #ccc;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 6.5rem;
+    height: 12rem;
   }
 `;
 
@@ -120,14 +148,14 @@ export const MobileImg = styled.img`
 `;
 
 export const DesktopContainer = styled.div`
-  width: 12rem;
-  height: 9rem;
+  width: 14rem;
+  height: 10rem;
   background-color: #383837;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 10px 4px 12px;
-  position: absolute;
-  transform: translate(-2rem, 0);
+  position: relative;
+  border: 1px solid #f5f5f5;
 
   &:after {
     content: "";
@@ -147,24 +175,31 @@ export const DesktopContainer = styled.div`
   &:before {
     position: absolute;
     content: "";
-    width: 110%;
+    width: 120%;
     height: 6px;
     background-color: #383837;
     bottom: -7px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1px;
+    border: 1px solid #f5f5f5;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 16rem;
+    height: 11rem;
   }
 `;
 
 export const TabletContainer = styled.div`
-  width: 11rem;
-  height: 8rem;
+  width: 12rem;
+  height: 9rem;
   background-color: #383837;
   border-radius: 4px;
   padding: 10px 4px 12px;
-  position: absolute;
-  transform: translate(7rem, 4rem);
+  position: relative;
+  display: none;
+  border: 1px solid #f5f5f5;
 
   &:before {
     content: "";
@@ -194,5 +229,14 @@ export const TabletContainer = styled.div`
     -moz-box-shadow: inset 0 0 10px #ccc;
     -webkit-box-shadow: inset 0 0 10px #ccc;
     box-shadow: inset 0 0 1px #ccc;
+  }
+
+  @media screen and (min-width: 576px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 14rem;
+    height: 10rem;
   }
 `;

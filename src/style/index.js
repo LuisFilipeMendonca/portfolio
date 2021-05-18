@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+import bg from "../assets/img/bg.png";
+
 export default createGlobalStyle`
     * {
         padding: 0;
@@ -14,6 +16,13 @@ export default createGlobalStyle`
 
     body {
       font-size: 1.3rem;
+      background: rgba(31,31,31, 1);
+      background-image: linear-gradient(rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.6), rgba(31, 31, 31, 0.9)), url(${bg});
+      background-repeat: no-repeat;
+      background-size: 100vh, 100vh;
+      background-position: left;
+      background-attachment: fixed;
+      z-index: -1;
     }
 
     h1 {
@@ -34,9 +43,30 @@ export default createGlobalStyle`
       list-style: none;
     }
 
-a {
-  text-decoration: none;
-}
+    a {
+      text-decoration: none;
+    }
+
+
+
+    @media screen and (min-width: 768px) {
+      html {
+        font-size: 87.5%;
+      }
+
+      body {
+        background-position: 120%;
+        background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.5) 40%, rgba(31, 31, 31, 0.9)), url(${bg});
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+
+      body {
+        background-position: 110%;
+        background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.5) 40%, rgba(31, 31, 31, 0.9)), url(${bg});
+      }
+    }
 
     @keyframes fade-top {
       0% {transform: translateY(-20px); opacity: 0}
@@ -52,48 +82,6 @@ a {
       0% {transform: translateY(20px); opacity: 0}
       100% {transform: translateY(0); opacity: 1}
     }
-`;
-
-export const Background = styled.div`
-  background-image: ${({ bg }) => `url(${bg})`},
-    linear-gradient(rgba(31, 31, 31, 1), rgba(31, 31, 31, 1));
-  background-repeat: no-repeat;
-  background-size: 100vh, 100%;
-  background-position: left;
-  background-attachment: fixed;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      rgba(31, 31, 31, 0.9),
-      rgba(31, 31, 31, 0.6),
-      rgba(31, 31, 31, 0.9)
-    );
-  }
-
-  @media screen and (min-width: 768px) {
-    background-position: right;
-
-    &:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(31, 31, 31, 0.9),
-        rgba(31, 31, 31, 0.3) 80%,
-        rgba(31, 31, 31, 0.9)
-      );
-    }
-  }
 `;
 
 export const Section = styled.section`

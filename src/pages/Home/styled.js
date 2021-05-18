@@ -6,34 +6,31 @@ export const HomeSection = styled(Section)`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 0 2rem;
+  padding: ${({ theme }) => theme.dimensions.navbar} 2rem;
 
   @media screen and (min-width: 768px) {
-    padding: 0 4rem;
+    padding: ${({ theme }) => theme.dimensions.navbar} 4rem;
   }
 
   @media screen and (min-width: 992px) {
-    padding: 0 6rem;
+    padding: ${({ theme }) => theme.dimensions.navbar} 6rem;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 0 8rem;
+    padding: ${({ theme }) => theme.dimensions.navbar} 8rem;
   }
 `;
 
 export const HomeContent = styled.div`
   width: 100%;
-  max-width: 40rem;
+  max-width: 45rem;
   color: white;
 
-  @media screen and (min-width: 992px) {
-    background: rgba(94, 94, 94, 0.3);
+  @media screen and (min-width: 768px) {
+    background: rgba(61, 61, 61, 0.4);
+    border: 1px solid #fd8b68;
     padding: 2rem;
     border-radius: 3px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 55rem;
   }
 `;
 
@@ -41,12 +38,12 @@ const hideElements = css`
   opacity: 0;
 `;
 
-export const HomeTitle = styled.h1`
+export const HomeTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 3rem;
 `;
 
-export const HomeSecondaryTitle = styled.p`
+export const HomeSecondaryTitle = styled.h1`
   /* ${hideElements} */
   font-size: 3rem;
   margin-bottom: 3rem;
@@ -56,7 +53,7 @@ export const HomeQuote = styled.p`
   /* ${hideElements}; */
 
   q {
-    color: #ff7517;
+    color: #fd8b68;
     font-size: 1.5rem;
   }
 `;

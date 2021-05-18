@@ -2,11 +2,9 @@ import React from "react";
 
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyle, { Background } from "./style";
+import GlobalStyle from "./style";
 
 import theme from "./style/theme";
-
-import bg from "./assets/img/bg.png";
 
 import Navbar from "./components/Navbar";
 
@@ -16,7 +14,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <Background bg={bg} />
         <Navbar />
         <Routes />
         <GlobalStyle />
