@@ -7,6 +7,7 @@ export const ProjectsSection = styled(Section)`
   flex-direction: column;
   align-items: flex-start;
   padding: ${({ theme }) => theme.dimensions.navbar} 1rem;
+  overflow-x: hidden;
 
   @media screen and (min-width: 768px) {
     padding: ${({ theme }) => theme.dimensions.navbar} 4rem;

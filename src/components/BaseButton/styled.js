@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 const DefaultButton = css`
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   position: relative;
   font-size: 1.2rem;
   display: inline-flex;

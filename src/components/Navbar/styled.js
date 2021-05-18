@@ -25,11 +25,6 @@ export const NavbarContainer = styled.nav`
   }
 `;
 
-export const NavbarBrand = styled.h1`
-  color: #ff7517;
-  z-index: 2;
-`;
-
 export const NavbarButton = styled.button`
   width: 3.5rem;
   height: 3.5rem;
@@ -40,6 +35,7 @@ export const NavbarButton = styled.button`
   z-index: 2;
   border-radius: 20%;
   background: rgba(61, 61, 61, 0.5);
+  border: 1px solid #f5f5f5;
 
   @media screen and (min-width: 768px) {
     display: none;

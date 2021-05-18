@@ -19,11 +19,10 @@ export default createGlobalStyle`
       background: rgba(31,31,31, 1);
       background-image: linear-gradient(rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.6), rgba(31, 31, 31, 0.9)), url(${bg});
       background-repeat: no-repeat;
-      background-size: 100vh, 100vh;
+      background-size: 100vh;
       background-position: left;
       background-attachment: fixed;
       z-index: -1;
-      overflow-x: hidden;
     }
 
     h1 {
