@@ -13,7 +13,6 @@ const navbarData = [
   { id: 1, to: "/", description: "Home" },
   { id: 2, to: "/about", description: "About" },
   { id: 3, to: "/projects", description: "Projects" },
-  { id: 4, to: "/contact", description: "Contact" },
 ];
 
 const Navbar = ({ currentNav }) => {

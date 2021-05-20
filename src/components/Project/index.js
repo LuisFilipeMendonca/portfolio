@@ -20,7 +20,15 @@ import BaseButton from "../BaseButton";
 
 import useAnimation from "../../hook/useAnimation";
 
-const Project = ({ mobileImg, desktopImg, tabletImg, title, description }) => {
+const Project = ({
+  id,
+  mobileImg,
+  desktopImg,
+  tabletImg,
+  title,
+  description,
+  setVideoHandler,
+}) => {
   const { ref } = useAnimation();
   return (
     <ProjectContainer
@@ -51,7 +59,12 @@ const Project = ({ mobileImg, desktopImg, tabletImg, title, description }) => {
             <FaGithub />
             <ProjectLinkDescription>Source code</ProjectLinkDescription>
           </BaseButton>
-          <BaseButton type="button" role="button" classname="primary">
+          <BaseButton
+            type="button"
+            role="button"
+            classname="primary"
+            clickHandler={() => setVideoHandler(id)}
+          >
             Watch preview
           </BaseButton>
         </ProjectCTA>
