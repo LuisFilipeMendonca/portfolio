@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import { ProjectsSection, ProjectsContent } from "./styled";
 
@@ -10,18 +10,24 @@ import Modal from "../../components/Modal";
 import Video from "../../assets/video/video.mp4";
 
 const ProjectsPages = () => {
-  const [videoRef, setVideoRef] = useState("");
+  const [selectedVideo, setSelectedVideo] = useState("");
+  const videoRef = useRef();
 
   const setVideoRefHandler = (id) => {
-    setVideoRef(id);
+    setSelectedVideo(id);
   };
 
-  const closeModalHandler = () => setVideoRef("");
+  const closeModalHandler = () => setSelectedVideo("");
 
   return (
     <ProjectsSection>
-      <Modal show={!!videoRef} closeHandler={closeModalHandler}>
-        <video controls>
+      <Modal show={!!selectedVideo} closeHandler={closeModalHandler}>
+        <video
+          controls
+          ref={videoRef}
+          onLoadStart={() => console.log("started")}
+          onLoadedData={() => console.log("data loaded")}
+        >
           <source src={Video} type="video/mp4" />
         </video>
       </Modal>
