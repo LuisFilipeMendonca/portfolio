@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   return (
     <AboutSection>
-      <AboutContent ref={ref} data-animation="fade-top" data-duration="0.5s">
+      <AboutContent ref={ref} data-animation="fade-bottom" data-duration="0.5s">
         <AboutText>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
