@@ -7,6 +7,8 @@ import { projects } from "../../constants";
 import Project from "../../components/Project";
 import Modal from "../../components/Modal";
 
+import Video from "../../assets/video/video.mp4";
+
 const ProjectsPages = () => {
   const [videoRef, setVideoRef] = useState("");
 
@@ -19,7 +21,9 @@ const ProjectsPages = () => {
   return (
     <ProjectsSection>
       <Modal show={!!videoRef} closeHandler={closeModalHandler}>
-        <div>Ola</div>
+        <video controls>
+          <source src={Video} type="video/mp4" />
+        </video>
       </Modal>
       <ProjectsContent>
         {projects.map(

@@ -12,11 +12,11 @@ export const ModalContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.8rem;
 
-  & div {
-    height: 100px;
-    width: 100px;
-    background: #ccc;
+  & video {
+    width: 100%;
+    max-width: 50rem;
   }
 
   &.modal-enter {
