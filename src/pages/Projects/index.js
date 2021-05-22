@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { FaPauseCircle, FaPlayCircle } from "react-icons/fa";
 
 import { ProjectsSection, ProjectsContent } from "./styled";
 
@@ -11,6 +12,7 @@ import Video from "../../assets/video/video.mp4";
 
 const ProjectsPages = () => {
   const [selectedVideo, setSelectedVideo] = useState("");
+  const [isVideoPaused, setIsVideoPaused] = useState(true);
   const videoRef = useRef();
 
   const setVideoRefHandler = (id) => {
@@ -19,17 +21,25 @@ const ProjectsPages = () => {
 
   const closeModalHandler = () => setSelectedVideo("");
 
+  const toggleVideoHandler = () => setIsVideoPaused((prev) => !prev);
+
+  const startPauseVideoHandler = () => {
+    if (isVideoPaused) videoRef.current.play();
+    else videoRef.current.pause();
+    toggleVideoHandler();
+  };
+
   return (
     <ProjectsSection>
       <Modal show={!!selectedVideo} closeHandler={closeModalHandler}>
-        <video
-          controls
-          ref={videoRef}
-          onLoadStart={() => console.log("started")}
-          onLoadedData={() => console.log("data loaded")}
-        >
-          <source src={Video} type="video/mp4" />
-        </video>
+        <div>
+          <video ref={videoRef} onEnded={toggleVideoHandler}>
+            <source src={Video} type="video/mp4" />
+          </video>
+          <button onClick={startPauseVideoHandler}>
+            {isVideoPaused ? <FaPlayCircle /> : <FaPauseCircle />}
+          </button>
+        </div>
       </Modal>
       <ProjectsContent>
         {projects.map(

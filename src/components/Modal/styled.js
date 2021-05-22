@@ -14,9 +14,29 @@ export const ModalContainer = styled.div`
   justify-content: center;
   padding: 0.8rem;
 
+  & div {
+    position: relative;
+  }
+
+  & div button {
+    position: absolute;
+    font-size: 4rem;
+    color: #fd8b68;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  & div:hover button {
+    opacity: 1;
+  }
+
   & video {
     width: 100%;
     max-width: 50rem;
+    border: 2px solid #fd8b68;
   }
 
   &.modal-enter {
