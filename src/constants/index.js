@@ -1,14 +1,17 @@
 import rickMobile from "../assets/img/rick_mobile.png";
 import rickDesktop from "../assets/img/rick_desktop.png";
 import rickTablet from "../assets/img/rick_tablet.png";
+import rickVideo from "../assets/video/rick.mp4";
 
 import dailyMobile from "../assets/img/daily_mobile.png";
 import dailyDesktop from "../assets/img/daily_desktop.png";
 import dailyTablet from "../assets/img/daily_tablet.png";
+import dailyVideo from "../assets/video/daily.mp4";
 
 import foodgramMobile from "../assets/img/foodgram_mobile.png";
 import foodgramDesktop from "../assets/img/foodgram_desktop.png";
 import foodgramTablet from "../assets/img/foodgram_tablet.png";
+import foodgramVideo from "../assets/video/foodgram.mp4";
 
 import socialMobile from "../assets/img/social_mobile.png";
 import socialDesktop from "../assets/img/social_desktop.png";
@@ -34,6 +37,7 @@ export const projects = [
       },
     ],
     githubRef: "/",
+    video: rickVideo,
   },
   {
     id: 2,
@@ -59,6 +63,7 @@ export const projects = [
       },
     ],
     githubRef: "/",
+    video: dailyVideo,
   },
   {
     id: 3,
@@ -84,6 +89,7 @@ export const projects = [
       },
     ],
     githubRef: "/",
+    video: foodgramVideo,
   },
   {
     id: 4,

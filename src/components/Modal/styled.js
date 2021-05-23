@@ -35,7 +35,6 @@ export const ModalContainer = styled.div`
 
   & video {
     width: 100%;
-    max-width: 50rem;
     border: 2px solid #fd8b68;
   }
 
