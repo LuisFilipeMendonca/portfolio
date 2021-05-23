@@ -14,6 +14,8 @@ import {
   ProjectDescription,
   ProjectCTA,
   ProjectLinkDescription,
+  ProjectGithubContainer,
+  ProjectGithubLink,
 } from "./styled";
 
 import BaseButton from "../BaseButton";
@@ -28,6 +30,7 @@ const Project = ({
   title,
   description,
   setVideoHandler,
+  githubRefs,
 }) => {
   const { ref } = useAnimation();
   return (
@@ -55,10 +58,14 @@ const Project = ({
           ))}
         </ProjectDescriptionContainer>
         <ProjectCTA>
-          <BaseButton path="/" role="link" classname="secondary">
-            <FaGithub />
-            <ProjectLinkDescription>Source code</ProjectLinkDescription>
-          </BaseButton>
+          <ProjectGithubContainer>
+            {githubRefs.map(({ id, value }) => (
+              <ProjectGithubLink href={value} key={id}>
+                <FaGithub />
+                <ProjectLinkDescription>{id}</ProjectLinkDescription>
+              </ProjectGithubLink>
+            ))}
+          </ProjectGithubContainer>
           <BaseButton
             type="button"
             role="button"

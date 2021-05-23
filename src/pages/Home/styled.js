@@ -6,18 +6,18 @@ export const HomeSection = styled(Section)`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: ${({ theme }) => theme.dimensions.navbar} 2rem;
+  padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 1rem;
 
   @media screen and (min-width: 768px) {
-    padding: ${({ theme }) => theme.dimensions.navbar} 4rem;
+    padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 4rem;
   }
 
   @media screen and (min-width: 992px) {
-    padding: ${({ theme }) => theme.dimensions.navbar} 6rem;
+    padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 6rem;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: ${({ theme }) => theme.dimensions.navbar} 8rem;
+    padding: ${({ theme }) => `calc(${theme.dimensions.navbar} + 1rem)`} 8rem;
   }
 `;
 

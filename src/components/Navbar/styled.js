@@ -35,7 +35,7 @@ export const NavbarButton = styled.button`
   z-index: 2;
   border-radius: 20%;
   background: rgba(61, 61, 61, 0.5);
-  border: 1px solid #f5f5f5;
+  border: 1px solid #fd8b68;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -89,6 +89,7 @@ export const NavbarMenu = styled.ul`
     position: static;
     transform: translateX(0);
     padding-top: 0;
+    /* justify-content: flex-end; */
     flex-direction: row;
     background: none;
   }

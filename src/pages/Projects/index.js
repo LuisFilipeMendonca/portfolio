@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { ProjectsSection, ProjectsContent } from "./styled";
+import { ProjectsSection, ProjectsContent, Video } from "./styled";
 
 import { projects } from "../../constants";
 
@@ -19,11 +19,10 @@ const ProjectsPages = () => {
   return (
     <ProjectsSection>
       <Modal show={!!selectedVideoIndex} closeHandler={closeModalHandler}>
-        <div>
-          <video controls>
-            <source src={selectedVideoIndex} type="video/mp4" />
-          </video>
-        </div>
+        <Video controls autoPlay>
+          <source src={selectedVideoIndex} type="video/mp4" />
+          Your browser doesn't support video.
+        </Video>
       </Modal>
       <ProjectsContent>
         {projects.map(
@@ -35,6 +34,7 @@ const ProjectsPages = () => {
             title,
             description,
             video,
+            githubRefs,
           }) => (
             <Project
               id={id}
@@ -44,6 +44,7 @@ const ProjectsPages = () => {
               tabletImg={tabletImg}
               title={title}
               description={description}
+              githubRefs={githubRefs}
               setVideoHandler={() => setVideoRefHandler(video)}
             />
           )

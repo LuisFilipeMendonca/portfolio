@@ -16,6 +16,7 @@ import foodgramVideo from "../assets/video/foodgram.mp4";
 import socialMobile from "../assets/img/social_mobile.png";
 import socialDesktop from "../assets/img/social_desktop.png";
 import socialTablet from "../assets/img/social_tablet.png";
+import socialVideo from "../assets/video/social.mp4";
 
 export const projects = [
   {
@@ -36,7 +37,12 @@ export const projects = [
           "It has features such as a Carousel where the characters are displayed, a Pagination to search the list of characters offered by the API and a SearchBox to search for your favorite characters.",
       },
     ],
-    githubRef: "/",
+    githubRefs: [
+      {
+        id: "Frontend",
+        value: "https://github.com/luisfilipemendonca/RickMorty",
+      },
+    ],
     video: rickVideo,
   },
   {
@@ -62,7 +68,16 @@ export const projects = [
           "You can also control your account by adding your income and outcomes. It has also a chronometer if you need a time manager.",
       },
     ],
-    githubRef: "/",
+    githubRefs: [
+      {
+        id: "Frontend",
+        value: "https://github.com/luisfilipemendonca/DailyManager-Frontend",
+      },
+      {
+        id: "Backend",
+        value: "https://github.com/luisfilipemendonca/DailyManager-Backend",
+      },
+    ],
     video: dailyVideo,
   },
   {
@@ -88,7 +103,16 @@ export const projects = [
           "You will also find features like search a recipie by name, order them by date or rate and also choose how many recipies you want to see per page.",
       },
     ],
-    githubRef: "/",
+    githubRefs: [
+      {
+        id: "Frontend",
+        value: "https://github.com/luisfilipemendonca/Foodgram-Frontend",
+      },
+      {
+        id: "Backend",
+        value: "https://github.com/luisfilipemendonca/Foodgram-Backend",
+      },
+    ],
     video: foodgramVideo,
   },
   {
@@ -109,6 +133,16 @@ export const projects = [
           "It has features such as a Carousel where the characters are displayed, a Pagination to search the list of characters offered by the API and a SearchBox to search for your favorite characters.",
       },
     ],
-    githubRef: "/",
+    githubRefs: [
+      {
+        id: "Frontend",
+        value: "https://github.com/luisfilipemendonca/SocialNetwork-frontend",
+      },
+      {
+        id: "Backend",
+        value: "https://github.com/luisfilipemendonca/SocialNetwork-backend",
+      },
+    ],
+    video: socialVideo,
   },
 ];

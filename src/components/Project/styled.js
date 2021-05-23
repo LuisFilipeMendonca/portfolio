@@ -53,6 +53,7 @@ export const ProjectDescription = styled.p`
 export const ProjectCTA = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const ProjectLinkDescription = styled.span`
@@ -203,4 +204,20 @@ export const TabletContainer = styled.div`
     width: 14rem;
     height: 10rem;
   }
+`;
+
+export const ProjectGithubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+`;
+
+export const ProjectGithubLink = styled.a`
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
 `;
