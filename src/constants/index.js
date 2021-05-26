@@ -125,12 +125,17 @@ export const projects = [
       {
         id: 1,
         value:
-          "This was my first project using React. A simple user interface design using the Rick and Morty API.",
+          "This projected was created using React with Redux in the frontend and using Express and a MySQL database in the backend with the help of Sequelize ORM.",
       },
       {
         id: 2,
         value:
-          "It has features such as a Carousel where the characters are displayed, a Pagination to search the list of characters offered by the API and a SearchBox to search for your favorite characters.",
+          "It was features like register/login into your account and after you can update or delete your account. Here you can see posts made by other users, add comments or even like the post and you can also create your own posts. In the world page you can see the posts from all the users, but you can also start following those users and see their posts in the following page.",
+      },
+      {
+        id: 3,
+        value:
+          "The application also uses the Observer API to create a pagination with infinite scrolling to fetch more posts and/or comments. Is still in development.",
       },
     ],
     githubRefs: [

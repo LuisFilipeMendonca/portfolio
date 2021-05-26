@@ -28,7 +28,7 @@ export const AboutContent = styled.div`
   opacity: 0;
 
   & > *:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   @media screen and (min-width: 768px) {
@@ -41,6 +41,5 @@ export const AboutContent = styled.div`
 
 export const AboutText = styled.p`
   text-indent: 2rem;
-  line-height: 1.6rem;
   color: #f5f5f5;
 `;

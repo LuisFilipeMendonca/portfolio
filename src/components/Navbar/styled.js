@@ -75,23 +75,21 @@ export const NavbarMenu = styled.ul`
   height: 100%;
   background: rgba(56, 56, 55, 0.9);
   transform: ${({ isOpen }) => (isOpen ? "none" : "translateX(-100%)")};
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  @media (orientation: landscape) {
-    padding-top: 5rem;
-  }
-
   @media screen and (min-width: 768px) {
     position: static;
     transform: translateX(0);
     padding-top: 0;
-    /* justify-content: flex-end; */
+    transition: none;
     flex-direction: row;
     background: none;
+    opacity: 1;
   }
 `;
 

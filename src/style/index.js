@@ -47,7 +47,20 @@ export default createGlobalStyle`
       text-decoration: none;
     }
 
+    p {
+      line-height: 1.9rem;
+    }
 
+    @media screen and (min-width: 567px) {
+      html {
+        font-size: 87.5%;
+      }
+
+      body {
+        background-size: 115vh;
+        font-size: 1.2rem;
+      }
+    }
 
     @media screen and (min-width: 768px) {
       html {
@@ -55,19 +68,21 @@ export default createGlobalStyle`
       }
 
       body {
-        background-position: 120%;
+        background-position: 145%;
+        font-size: 1.2rem;
       }
     }
 
     @media screen and (min-width: 992px) {
       body {
-        background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.5) 40%, rgba(31, 31, 31, 0.9)), url(${bg});
+        background-position: 145%;
+        background-image: linear-gradient(to right, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.3) 55%, rgba(31, 31, 31, 0.9)), url(${bg});
       }
     }
 
     @media screen and (min-width: 1200px) {
       body {
-        background-position: 110%;
+        background-position: 95%;
       }
     }
 

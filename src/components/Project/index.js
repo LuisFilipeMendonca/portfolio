@@ -60,9 +60,11 @@ const Project = ({
         <ProjectCTA>
           <ProjectGithubContainer>
             {githubRefs.map(({ id, value }) => (
-              <ProjectGithubLink href={value} key={id}>
+              <ProjectGithubLink href={value} key={id} target="_blank">
                 <FaGithub />
-                <ProjectLinkDescription>{id}</ProjectLinkDescription>
+                <ProjectLinkDescription>
+                  {id} - Source Code
+                </ProjectLinkDescription>
               </ProjectGithubLink>
             ))}
           </ProjectGithubContainer>

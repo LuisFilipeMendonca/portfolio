@@ -20,6 +20,8 @@ const Navbar = ({ currentNav }) => {
 
   const navbarToggler = () => setIsOpen((prev) => !prev);
 
+  const closeNavbarHandler = () => setIsOpen(false);
+
   return (
     <NavbarContainer>
       <NavbarButton onClick={navbarToggler}>
@@ -30,7 +32,7 @@ const Navbar = ({ currentNav }) => {
       <NavbarMenu isOpen={isOpen}>
         {navbarData.map(({ id, to, description }) => (
           <NavbarItem key={id} isActive={currentNav === to}>
-            <NavbarLink to={to} exact>
+            <NavbarLink to={to} exact onClick={closeNavbarHandler}>
               {description}
             </NavbarLink>
           </NavbarItem>

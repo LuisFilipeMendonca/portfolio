@@ -50,12 +50,6 @@ export const ProjectDescription = styled.p`
   }
 `;
 
-export const ProjectCTA = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const ProjectLinkDescription = styled.span`
   margin-left: 0.5rem;
 `;
@@ -176,8 +170,6 @@ export const TabletContainer = styled.div`
     top: 3px;
     left: 50%;
     transform: translateX(-50%);
-    -moz-box-shadow: inset 0 0 10px #ccc;
-    -webkit-box-shadow: inset 0 0 10px #ccc;
     box-shadow: inset 0 0 1px #ccc;
   }
 
@@ -191,8 +183,6 @@ export const TabletContainer = styled.div`
     bottom: 3px;
     left: 50%;
     transform: translateX(-50%);
-    -moz-box-shadow: inset 0 0 10px #ccc;
-    -webkit-box-shadow: inset 0 0 10px #ccc;
     box-shadow: inset 0 0 1px #ccc;
   }
 
@@ -206,10 +196,29 @@ export const TabletContainer = styled.div`
   }
 `;
 
+export const ProjectCTA = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+`;
+
 export const ProjectGithubContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   & > *:not(:last-child) {
     margin-bottom: 0.8rem;
@@ -220,4 +229,8 @@ export const ProjectGithubLink = styled.a`
   color: #f5f5f5;
   display: flex;
   align-items: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
