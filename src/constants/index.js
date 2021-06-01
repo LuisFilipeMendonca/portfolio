@@ -20,65 +20,39 @@ import socialVideo from "../assets/video/social.mp4";
 
 export const projects = [
   {
-    id: 1,
-    mobileImg: rickMobile,
-    desktopImg: rickDesktop,
-    tabletImg: rickTablet,
-    title: "Rick and Morty",
+    id: 4,
+    mobileImg: socialMobile,
+    desktopImg: socialDesktop,
+    tabletImg: socialTablet,
+    title: "Social Network",
     description: [
       {
         id: 1,
         value:
-          "This was my first project using React. A simple user interface design using the Rick and Morty API.",
+          "This projected was created using React with Redux in the frontend and using Express and a MySQL database in the backend with the help of Sequelize ORM.",
       },
       {
         id: 2,
         value:
-          "It has features such as a Carousel where the characters are displayed, a Pagination to search the list of characters offered by the API and a SearchBox to search for your favorite characters.",
-      },
-    ],
-    githubRefs: [
-      {
-        id: "Frontend",
-        value: "https://github.com/luisfilipemendonca/RickMorty",
-      },
-    ],
-    video: rickVideo,
-  },
-  {
-    id: 2,
-    mobileImg: dailyMobile,
-    desktopImg: dailyDesktop,
-    tabletImg: dailyTablet,
-    title: "The Daily Manager",
-    description: [
-      {
-        id: 1,
-        value:
-          "This was my first full stack app, and my first experience with VueJS and Express. I also used Vuex has global state manager and Sequelize ORM to connect to MySQL Database.",
-      },
-      {
-        id: 2,
-        value:
-          "In this application you can register and login into your account. Manage your contacts list by adding and removing them as well as your schedule using the task manager.",
+          "It was features like register/login into your account and after you can update or delete your account. Here you can see posts made by other users, add comments or even like the post and you can also create your own posts. In the world page you can see the posts from all the users, but you can also start following those users and see their posts in the following page.",
       },
       {
         id: 3,
         value:
-          "You can also control your account by adding your income and outcomes. It has also a chronometer if you need a time manager.",
+          "The application also uses the Observer API to create a pagination with infinite scrolling to fetch more posts and/or comments. Is still in development.",
       },
     ],
     githubRefs: [
       {
         id: "Frontend",
-        value: "https://github.com/luisfilipemendonca/DailyManager-Frontend",
+        value: "https://github.com/luisfilipemendonca/SocialNetwork-frontend",
       },
       {
         id: "Backend",
-        value: "https://github.com/luisfilipemendonca/DailyManager-Backend",
+        value: "https://github.com/luisfilipemendonca/SocialNetwork-backend",
       },
     ],
-    video: dailyVideo,
+    video: socialVideo,
   },
   {
     id: 3,
@@ -116,38 +90,64 @@ export const projects = [
     video: foodgramVideo,
   },
   {
-    id: 4,
-    mobileImg: socialMobile,
-    desktopImg: socialDesktop,
-    tabletImg: socialTablet,
-    title: "Social Network",
+    id: 2,
+    mobileImg: dailyMobile,
+    desktopImg: dailyDesktop,
+    tabletImg: dailyTablet,
+    title: "The Daily Manager",
     description: [
       {
         id: 1,
         value:
-          "This projected was created using React with Redux in the frontend and using Express and a MySQL database in the backend with the help of Sequelize ORM.",
+          "This was my first full stack app, and my first experience with VueJS and Express. I also used Vuex has global state manager and Sequelize ORM to connect to MySQL Database.",
       },
       {
         id: 2,
         value:
-          "It was features like register/login into your account and after you can update or delete your account. Here you can see posts made by other users, add comments or even like the post and you can also create your own posts. In the world page you can see the posts from all the users, but you can also start following those users and see their posts in the following page.",
+          "In this application you can register and login into your account. Manage your contacts list by adding and removing them as well as your schedule using the task manager.",
       },
       {
         id: 3,
         value:
-          "The application also uses the Observer API to create a pagination with infinite scrolling to fetch more posts and/or comments. Is still in development.",
+          "You can also control your account by adding your income and outcomes. It has also a chronometer if you need a time manager.",
       },
     ],
     githubRefs: [
       {
         id: "Frontend",
-        value: "https://github.com/luisfilipemendonca/SocialNetwork-frontend",
+        value: "https://github.com/luisfilipemendonca/DailyManager-Frontend",
       },
       {
         id: "Backend",
-        value: "https://github.com/luisfilipemendonca/SocialNetwork-backend",
+        value: "https://github.com/luisfilipemendonca/DailyManager-Backend",
       },
     ],
-    video: socialVideo,
+    video: dailyVideo,
+  },
+  {
+    id: 1,
+    mobileImg: rickMobile,
+    desktopImg: rickDesktop,
+    tabletImg: rickTablet,
+    title: "Rick and Morty",
+    description: [
+      {
+        id: 1,
+        value:
+          "This was my first project using React. A simple user interface design using the Rick and Morty API.",
+      },
+      {
+        id: 2,
+        value:
+          "It has features such as a Carousel where the characters are displayed, a Pagination to search the list of characters offered by the API and a SearchBox to search for your favorite characters.",
+      },
+    ],
+    githubRefs: [
+      {
+        id: "Frontend",
+        value: "https://github.com/luisfilipemendonca/RickMorty",
+      },
+    ],
+    video: rickVideo,
   },
 ];
